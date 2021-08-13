@@ -5,19 +5,166 @@
     <title>Product Landing Page</title>
 </head>
 
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap" rel="stylesheet">
 <style>
 
+    .email-label{
+    display: none;
+}
+
+    body{
+        font-family: 'Prompt', sans-serif;
+        background-color:#93cfcf;
+    }
+
+    /*header fixed*/
+    #header {
+        display:flex;
+        position: fixed;
+        top:0;
+        left:0;
+        min-height: 75px;
+        background:url("images/header.png");
+        background-size: contain;
+        flex-direction: row;
+        width:100%;
+        justify-content: space-between;
+        margin:auto;
+    }
+
+    #logo-container{
+
+        display:flex;
+        align-items: center;
+        order:-1;
+        max-width:400px;
+
+
+    }
+
+    .logo-1{
+        width:70%;
+        height:auto;
+        margin-left:20px;
+    }
+/*animated underline nav hover-start*/
+    #nav-bar{
+        display:flex;
+        width:30%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link{
+        position:relative;
+        font-family: 'Prompt', sans-serif;
+        font-weight:600;
+        color:black;
+    }
+    .nav-link::after{
+        content:'';
+        position:absolute;
+        background-color:black;
+        height:3px;
+        width:0;
+        left:0;
+        bottom:-1px;
+        transition: 0.2s;
+    }
+
+    .nav-link:hover:after{
+        width:100%
+    }
+    /*animated underline nav hover-end*/
+    .nav-link:link {
+        text-decoration: none;
+    }
+
+
+    #email-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 200px;
+        margin-top: 80px;
+    }
+
+    #email{
+        background-color: #ffffff;
+        border:none;
+        padding:10px 50px 10px 0;
+    }
+
+    ::placeholder {
+        color: #000000;}
+
+    #form{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    form:hover{
+        color: #ffffff;
+        background:url("images/form.png");
+        background-size: 100% 100%;
+        transition:0.3s;
+        padding:10px 20px 20px 20px ;
+        border:10px;
+        margin:auto;
+    }
+
+    #submit {
+        background-color: black;
+        margin: 20px;
+        color: ghostwhite;
+        border-color: black;
+    }
+    #submit:hover{
+        border-color: ghostwhite;
+    }
+
+    #video-container{
+        display:flex;
+        justify-content: center;
+        margin:20px;
+    }
+
+
+
+
+
 </style>
+
 <body>
-<div>
-    <header id="header">
+    <main>
+            <header id="header">
+                <div id="logo-container">
+                    <img class="logo-1" src="images/logo_1.png" alt="stylophone-logo">
+                </div>
+                <nav id="nav-bar">
+                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#">How it works</a>
+                            <a class="nav-link" href="#">Pricing</a>
+                </nav>
+            </header>
+        <section id="email-section">
 
-    </header>
-</div>
-<main>
-
-
-</main>
-
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <h2>Find out the original synth</h2>
+                <label class="email-label" for="email">email</label>
+                <input type="email" id="email" name="email" placeholder="enter your email here" required>
+                <input  type="submit" id="submit" value="Let's play music">
+            </form>
+        </section>
+        <div id="video-container">
+            <iframe  id="video" width="420" height="220"
+                     src="https://www.youtube.com/embed/EGXFcu1V5ek">
+            </iframe>
+        </div>
+    </main>
 </body>
 </html>
