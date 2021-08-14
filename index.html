@@ -90,13 +90,13 @@
         justify-content: center;
         text-align: center;
         height: 200px;
-        margin-top: 80px;
+        margin: 100px 0 100px 0;
     }
 
     #email{
         background-color: #ffffff;
         border:none;
-        padding:10px 50px 10px 0;
+        padding:10px 50px 10px 10px;
     }
 
     ::placeholder {
@@ -133,7 +133,39 @@
         margin:20px;
     }
 
+    #features-container{
+        margin: 100px 0 100px 0;
+        display:flex;
+        flex-direction: column;
 
+    }
+
+    .ship, .ass{
+        background-color: ghostwhite;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        animation:slideMe 1s ease-out;
+    }
+
+    @keyframes slideMe {
+        0%{ transform:translateX(-500px);}
+        }
+    .sh-text{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .ship-image{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width:20%
+    }
+
+    .s-im,  .a-im{
+        width:70%
+    }
 
 
 
@@ -160,6 +192,31 @@
                 <input  type="submit" id="submit" value="Let's play music">
             </form>
         </section>
+
+        <section id="features-container">
+            <div class="ship">
+                <div class="ship-image">
+                    <img class="s-im" src="images/shipp.png" alt="Shipping">
+                </div>
+                <div class="sh-text">
+                    <h2 class="ship-ass-h">Fast Shipping</h2>
+                    <p class="ship-ass-p">We make sure you receive your stylophone 2 to 3 days after the purchase. We also provide free returns if you are not satisfied.
+                    </p>
+                </div>
+
+            </div>
+            <div class="ass">
+                <div class="ship-image">
+                    <img class="a-im" src="images/ass.png" alt="Assurance">
+                </div>
+                <div class="sh-text">
+                    <h2 class="ship-ass-h">Quality Assurance</h2>
+                    <p class="ship-ass-p">For every purchase you make, we will ensure there are no damages or faults and we will check and test sound of your instrument.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <div id="video-container">
             <iframe  id="video" width="420" height="220"
                      src="https://www.youtube.com/embed/EGXFcu1V5ek">
