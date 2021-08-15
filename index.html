@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
 </head>
 
@@ -34,13 +35,10 @@
     }
 
     #logo-container{
-
         display:flex;
         align-items: center;
         order:-1;
         max-width:400px;
-
-
     }
 
     .logo-1{
@@ -167,7 +165,67 @@
         width:70%
     }
 
+    #types{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin:100px 50px 50px 50px;
+    }
 
+    @media (max-width: 800px) {
+        #types{
+            flex-direction:column;
+            width: 100%;
+            margin: auto;
+            justify-content: center;
+            align-items: center;}
+        }
+
+    .models{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background:url("images/template.png");
+        background-size: 100% 100%;
+        align-items: center;
+        text-align: center;
+        width:300px;
+        margin: 10px;
+        padding: 30px 0 30px 0;}
+
+    .model-image{
+        width:50%;
+    }
+
+    .model-image-c{
+        width:100%
+    }
+    .model-image-b{
+        width:70%
+    }
+
+    .price, .model{
+        font-weight:900;
+    }
+
+    .model{
+        font-weight:300;
+        font-size:18px
+    }
+    .btn{
+        border:none;
+        border-radius:30px;
+        padding:5px 10px 5px 10px;
+    }
+
+    footer{
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        margin:100px 0 0 0;
+        background-color: #7cb6b6;
+        padding:10px;
+    }
 
 </style>
 
@@ -222,6 +280,36 @@
                      src="https://www.youtube.com/embed/EGXFcu1V5ek">
             </iframe>
         </div>
+
+        <section id="types">
+            <div class="models">
+                <div class="model">Dübreq Stylophone S-1</div>
+                <h2 class="price">$27.00</h2>
+                <div class="model-image-c"><img class="model-image" src="images/s1.png" alt="stylophone-s1"></div>
+                <button class="btn">SELECT</button>
+            </div>
+            <div class="models">
+                <div class="model">Dübreq Stylophone Gen-X1</div>
+                <h2 class="price">$67.00</h2>
+                <div class="model-image-c"><img class="model-image" src="images/x1.png" alt="stylophone-genx"></div>
+                <button class="btn">SELECT</button>
+            </div>
+            <div class="models">
+                <div class="model">Dübreq Stylophone Beatbox</div>
+                <h2 class="price">$30.99</h2>
+                <div class="model-image-b"><img class="model-image" src="images/beatbox.png" alt="stylophone-beatbox"></div>
+                <button class="btn">SELECT</button>
+            </div>
+        </section>
+            <footer>
+                <nav id="nav-bar-footer">
+                    <a class="nav-link" href="#">Privacy</a>
+                    <a class="nav-link" href="#">Terms</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+                <nav id="copyrights">Copyright 2021, PurplePizza</nav>
+            </footer>
+
     </main>
 </body>
 </html>
